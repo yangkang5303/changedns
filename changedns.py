@@ -1,6 +1,7 @@
 import urllib.request
 import json
 from bs4 import BeautifulSoup
+# godaddy的更新dns的api
 api_url = 'https://api.godaddy.com/v1/domains/fkce.me/records'
 
 def get_ip():
@@ -51,4 +52,6 @@ def update_NS(api_url, ip_addr):
     except:
         print('错误！')
 ACTIP = get_ip()
-update_NS(api_url,ACTIP)
+print(ACTIP)
+#如果要开启更新，就uncommenet
+# update_NS(api_url,ACTIP)
